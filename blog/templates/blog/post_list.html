@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Jen's Django Girls Blog</title>
+    </head>
+    <body>
+    <div>
+      <h2>Jen's Django Girls Blog</h2>
+    </div>
+    {% for post in posts %}
+      <div>
+        <p>published: {{ post.published_date }}</p>
+        <h3><a href="">{{ post.title }}</a></h3>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <hr>
+      </div>
+    {% endfor %}
+    </body>
+</html>
